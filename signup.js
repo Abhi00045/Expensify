@@ -5,6 +5,18 @@ let cnPassword = document.getElementById("confirmPassword");
 
 let submit=document.getElementById("btn");
 
+// const saveDetails = (Email , Password)=>
+//     {
+//         if(!localStorage.getItem(Email))
+//             {
+//             localStorage.setItem(Email , Password);
+//             alert("Registered Successfully");
+//             }
+//             else{
+//                 alert("Email Already Registered");
+//             }
+//     }
+
 submit.addEventListener("click",function(){
     if(Fname.value ===""){
         alert("Enter the Name");
@@ -15,11 +27,24 @@ submit.addEventListener("click",function(){
             if(password.value ===""){
                 alert("Enter the password");
                     }
-            if(cnPassword.value!=password.value){
-                alert("Password doesn't match");
+            if(cnPassword.value===password.value){
+                
+                localStorage.setItem("Name",Fname.value);
+                localStorage.setItem("Email",email.value);
+                localStorage.setItem("Password",password.value);
+                alert("Registered Successfully!!")
+                     }
+            else{
+                alert("Retry password");   
                     }
-                    localStorage.setItem("Name",Fname.value);
-                    localStorage.setItem("Email",email.value);
-                    localStorage.setItem("Password",password.value);
+    // if(password.value === cnPassword.value)
+    //     {
+    //         saveDetails(email.value , password.value);
+    //     }
+    // else 
+    // {
+    //     alert("Retry Password");
+    // }  
 })
+
 

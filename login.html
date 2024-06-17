@@ -13,150 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            background: #C298D7;
-            font-family: "Rationale", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-        header{
-            padding: 20px;
-            display: flex;
-           /* border: 2px solid red; */
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            height: 8vh;
-            background: #f6d3f1;
-            position: sticky;
-            .logo img{
-             width: 60px;
-               /* box-shadow: 1px 1px 1px 1px black; */
-          }
-    .menu ul{
-        display: flex;
-        flex-direction: row;
-        gap: 50px;
-    }.menu ul li{
-        list-style: none;
-        font-family:sans-serif;
-        font-size: 17px;
-        /* color: rgb(187, 182, 182); */
-        color:rgb(7, 7, 7);
-        font-weight: 500;
-        cursor: pointer;
-        a{
-            text-decoration: none;
-            color: black
-        }
-    }
-}
-        h1{
-            margin-top: 40px;
-        font-family: "Abril Fatface", serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 150px;
-        color: #342936;
-        position:fixed;
-        }
-        h3{
-            font-size: 30px;
-        }
-        .center{
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            align-items: center;
-            justify-content: center;
-            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6SXBiscMksrAbCit__F5GntSP9nC3p0_eg&s);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            color: whitesmoke;
-            position: fixed;
-            border-radius: 20px;
-            margin-top: 100px;
-            margin-left: 500px;
-            padding: 50px;
-            opacity: 90%;
-            border: 2px solid rgb(255, 255, 255);
-
-        }
-        form{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            div{
-                display: flex;
-                flex-direction: row;
-                font-size: 20px;
-                font-weight: 400;
-                gap: 20px;
-                input{
-                    border-radius: 10px;
-                    border: 2px solid black;
-                    width: 18vw;
-                    height: 5vh;
-                    padding: 10px;
-                }
-            }
-            .sex{
-                display: flex;
-                flex-direction: row;
-                gap: 48px;
-            }
-        }
-        button{
-          margin: 10px;
-          padding: 2px;
-          background:#f9abef;
-          color: beige;
-          width: 150px;
-          height: 5.5vh;
-          border-radius: 10px;
-          border: 2px solid rgb(204, 158, 88) ;
-          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-          font-weight: 600;
-          font-size: 15px;
-    a{
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-    }
-}
-button:hover{
-    background: #4e364e;
-    a{
-        color: white;
-    }
-}
-button:active{
-    background: #4e364e;
-    a{
-        color: white;
-    }
-}
-.okay{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    font-size: 20px;
-    .swas{
-        color: whitesmoke;
-    }
-    .swag{
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-    }
-}
-    </style>
-    <link rel="stylesheet" href="s">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <main><header>
@@ -181,11 +38,11 @@ button:active{
                 <form>
                     <div class="sex">
                         <label for="Email">Email :</label>
-                    <input type="email" placeholder="abcdef@gmail.com" required>
+                    <input type="email" id="email"  placeholder="abcdef@gmail.com" required>
                     </div>
                     <div>
                         <label for="password">Password :</label>
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" id="password" placeholder="Password" required>
                     </div>
                 </form>
                 <div class="niether">
