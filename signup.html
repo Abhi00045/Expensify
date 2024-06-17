@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rationale&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: #C298D7;
+            font-family: "Rationale", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        header{
+            padding: 20px;
+            display: flex;
+           /* border: 2px solid red; */
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 8vh;
+            background: #f6d3f1;
+            position: sticky;
+            .logo img{
+             width: 60px;
+               /* box-shadow: 1px 1px 1px 1px black; */
+          }
+    .menu ul{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }.menu ul li{
+        list-style: none;
+        font-family:sans-serif;
+        font-size: 17px;
+        /* color: rgb(187, 182, 182); */
+        color:rgb(7, 7, 7);
+        font-weight: 500;
+        cursor: pointer;
+        a{
+            text-decoration: none;
+            color: black
+        }
+    }
+}
+        h1{
+            margin-top: 40px;
+        font-family: "Abril Fatface", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 150px;
+        color: #342936;
+        position:fixed;
+        }
+        h3{
+            font-size: 30px;
+        }
+        .center{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6SXBiscMksrAbCit__F5GntSP9nC3p0_eg&s);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: whitesmoke;
+            position: fixed;
+            border-radius: 20px;
+            margin-top: 30px;
+            margin-left: 500px;
+            padding: 50px;
+            opacity: 90%;
+            border: 2px solid rgb(255, 255, 255);
+
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-size: 20px;
+                font-weight: 400;
+                gap: 20px;
+                input{
+                    border-radius: 10px;
+                    border: 2px solid black;
+                    width: 18vw;
+                    height: 5vh;
+                    padding: 10px;
+                }
+            }
+            .sex{
+                display: flex;
+                flex-direction: row;
+                gap: 48px;
+            }
+        }
+        button{
+          margin: 10px;
+          padding: 2px;
+          background:#f9abef;
+          color: beige;
+          width: 150px;
+          height: 5.5vh;
+          border-radius: 10px;
+          border: 2px solid rgb(204, 158, 88) ;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          font-weight: 600;
+          font-size: 15px;
+    a{
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+    }
+}
+button:hover{
+    background: #4e364e;
+    a{
+        color: white;
+    }
+}
+button:active{
+    background: #4e364e;
+    a{
+        color: white;
+    }
+}
+   .swag{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+    </style>
+</head>
+<body>
+    <main><header>
+        <div class="logo">
+            <a href="index.html"><img src="/grape-fruit-yuzu-icon.webp" alt="logo"></a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>About</li>
+            </ul>
+        </div>
+    </header>
+        <section>
+            <h1>Simplify your
+        financial life today.</h1>
+        <!-- <div class="second" id="second">
+            <img id="graphic" src="Academy-Hero-img-1.avif" alt="img">
+        </div> -->
+            <div class="center">
+                <h3>Sign Up</h3>
+                <form>
+                    <div>
+                        <label for="FirstName">First Name</label>
+                        <input type="text" placeholder="First Name" required>
+                    </div>
+                    <div>
+                        <label for="FirstName">Second Name</label>
+                        <input type="text" placeholder="Second Name" required>
+                    </div>
+
+                    <div class="sex">
+                        <label for="Email">Email :</label>
+                    <input type="email" placeholder="abcdef@gmail.com" required>
+                    </div>
+                    <div>
+                        <label for="password">Password :</label>
+                    <input type="password" placeholder="Password" required>
+                    </div>
+                    <div>
+                        <label for="FirstName">Confirm Password</label>
+                        <input type="password" placeholder="Confirm Password" required>
+                    </div>
+                </form>
+                <div class="niether">
+                    <button id="btn"><a href="">Submit</a></button>
+                </div>
+                <a class="swag" href="login.html">Log in</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

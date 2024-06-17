@@ -20,12 +20,16 @@ body{
     "width" 100;
 }
 header{
-    margin-top: 15px;
+    /* margin-top: 15px; */
+    padding: 20px;
     display: flex;
     /* border: 2px solid red; */
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    height: 8vh;
+    background: #f6d3f1;
+    position: sticky;
     .logo img{
         width: 60px;
         /* box-shadow: 1px 1px 1px 1px black; */
