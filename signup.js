@@ -9,14 +9,17 @@ submit.addEventListener("click",function(){
     if(Fname.value ===""){
         alert("Enter the Name");
             }
-    if(email.value ===""){
-        alert("Enter the Email");
-            }
-    if(password.value ===""){
-        alert("Enter the password");
-            }
-    if(cnPassword.value!=password.value){
-        alert("Password doesn't match");
-            }
+            if(email.value ===""){
+                alert("Enter the Email");
+                    }
+            if(password.value ===""){
+                alert("Enter the password");
+                    }
+            if(cnPassword.value!=password.value){
+                alert("Password doesn't match");
+                    }
+                    localStorage.setItem("Name",Fname.value);
+                    localStorage.setItem("Email",email.value);
+                    localStorage.setItem("Password",password.value);
 })
 

@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rationale&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <style>
+
         *{
             margin: 0;
             padding: 0;
@@ -72,7 +57,7 @@
         .center{
             display: flex;
             flex-direction: column;
-            gap: 30px;
+            gap: 20px;
             align-items: center;
             justify-content: center;
             background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6SXBiscMksrAbCit__F5GntSP9nC3p0_eg&s);
@@ -82,7 +67,7 @@
             color: whitesmoke;
             position: fixed;
             border-radius: 20px;
-            margin-top: 100px;
+            margin-top: 30px;
             margin-left: 500px;
             padding: 50px;
             opacity: 90%;
@@ -96,6 +81,7 @@
             div{
                 display: flex;
                 flex-direction: row;
+                justify-content: space-between;
                 font-size: 20px;
                 font-weight: 400;
                 gap: 20px;
@@ -142,61 +128,7 @@ button:active{
         color: white;
     }
 }
-.okay{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    font-size: 20px;
-    .swas{
-        color: whitesmoke;
-    }
-    .swag{
+   .swag{
         text-decoration: none;
         color: rgb(255, 255, 255);
     }
-}
-    </style>
-    <link rel="stylesheet" href="s">
-</head>
-<body>
-    <main><header>
-        <div class="logo">
-            <a href="index.html"><img src="/grape-fruit-yuzu-icon.webp" alt="logo"></a>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>About</li>
-            </ul>
-        </div>
-    </header>
-        <section>
-            <h1>Simplify your
-        financial life today.</h1>
-        <!-- <div class="second" id="second">
-            <img id="graphic" src="Academy-Hero-img-1.avif" alt="img">
-        </div> -->
-            <div class="center">
-                <h3>Login</h3>
-                <form>
-                    <div class="sex">
-                        <label for="Email">Email :</label>
-                    <input type="email" placeholder="abcdef@gmail.com" required>
-                    </div>
-                    <div>
-                        <label for="password">Password :</label>
-                    <input type="password" placeholder="Password" required>
-                    </div>
-                </form>
-                <div class="niether">
-                    <button id="btn"><a href="">Log in</a></button>
-                </div>
-                <div class="okay">
-                    <a class="swas" href="https://support.google.com/accounts/answer/41078?hl=en&co=GENIE.Platform%3DDesktop">forgot password?</a>
-                    <a class="swag" href="signup.html">Sign Up</a>
-                </div>
-            </div>
-        </section>
-    </main>
-</body>
-</html>
