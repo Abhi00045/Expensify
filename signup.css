@@ -60,11 +60,12 @@
             gap: 20px;
             align-items: center;
             justify-content: center;
-            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6SXBiscMksrAbCit__F5GntSP9nC3p0_eg&s);
+            /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs6SXBiscMksrAbCit__F5GntSP9nC3p0_eg&s);
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
-            color: whitesmoke;
+            background-size: cover; */
+            background: #693DA3;
+            color: rgb(0, 0, 0);
             position: fixed;
             border-radius: 20px;
             margin-top: 30px;
