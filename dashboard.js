@@ -7,6 +7,8 @@ let balances = document.getElementById("balances");
 let savings = document.getElementById("Savings");
 let spendings = document.getElementById("Spendings");
 
+
+
 let  totalBalance = 0;
 let spendAmount =0;
 let savingAmount =0;
@@ -15,7 +17,7 @@ let savingAmount =0;
       let arr=localStorage.getItem("array");
       arr=JSON.parse(arr);
       arr.forEach( element => {
-        let transactionHistory = document.getElementById("transactionHistory");
+        let newThing = document.getElementById("newthing");
 
             let div = document.createElement("div");
 
@@ -40,7 +42,7 @@ let savingAmount =0;
         div.style.padding="10px"
             
             div.appendChild(div2);
-            transactionHistory.appendChild(div);
+            newThing.appendChild(div);
         amt.innerHTML="$"+element.amount;
             des.innerHTML=element.des;
             h3.innerHTML=element.type;
@@ -86,7 +88,7 @@ addBtn.addEventListener("click",()=>{
             arr.push(obj);
             localStorage.setItem("array",JSON.stringify(arr));
 
-            let transactionHistory = document.getElementById("transactionHistory");
+            let newThing = document.getElementById("newthing");
 
             let div = document.createElement("div");
 
@@ -105,7 +107,7 @@ addBtn.addEventListener("click",()=>{
             div2.style.gap="100px"
             
             div.appendChild(div2);
-            transactionHistory.appendChild(div);
+            newThing.appendChild(div);
 
             amt.innerHTML="$"+amount.value;
             des.innerHTML=description.value;
@@ -113,4 +115,35 @@ addBtn.addEventListener("click",()=>{
 
         }
     })
+//     let action = document.getElementById("action");
+// let tax = document.getElementById("tax");
+// let transactions = document.getElementById("transactions");
+// let newThing=document.getElementById("newthing");
+// let transactionHistory=document.getElementById("transactionHistory");
 
+
+// // console.log(transactions,transactionHistory);
+// tax.addEventListener("click",function(){
+//     transactions.style.visibility = 'hidden'; 
+//    newThing.style.display="none";
+//    let div = document.createElement("div");
+//    let h1=document.createElement("h2");
+//    div.appendChild(h1);
+//    transactionHistory.appendChild(div);
+//    h1.innerHTML="Tax Rate :-"
+// })
+
+
+// let ai = document.getElementById("Ai");
+// // let action = document.getElementById("action");
+
+// ai.addEventListener("click",()=>{
+//     transactions.style.visibility = 'hidden'; 
+//    transactionHistory.style.display="none";
+
+//    let div= document.createElement("div");
+//    let h2 = document.createElement("h2");
+//    div.appendChild(h2);
+//    action.appendChild(div);
+//    h2.innerHTML="Still working on it...";
+// })

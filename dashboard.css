@@ -29,7 +29,7 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background: #ccc9fa;
+    background: #f6d3f1;
     position: sticky;
     /* z-index: 20px; */
     div a{
@@ -49,6 +49,7 @@ header{
     flex-direction: row;
     gap: 30px;
     /* flex-wrap: wrap; */
+    
  }
 .sidebar{
     height: 91vh;
@@ -57,6 +58,7 @@ header{
     background: #A7A1FF;
     /* background: #8292F8; */
     position: sticky;
+    top: 0;
     /* padding: 0px; */
     ul{
         /* margin-top: 20px; */
