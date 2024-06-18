@@ -10,6 +10,7 @@ window.addEventListener("load",()=>{
     nam.innerText=head;
 })
 
+
 // import { GoogleGenerativeAI } from "@google/generative-ai";
 
 //       // Make sure to secure your API key in a real-world application
