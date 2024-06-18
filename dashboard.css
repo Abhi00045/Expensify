@@ -1,5 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    font-family: "Noto Sans Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "width" 100;
+}
+header{
+    height: 9vh;
+    width: 100vw;
+    /* border: 1px solid blue; */
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #ccc9fa;
+    div a{
+        text-decoration: none;
+        color: black;
+    }
+/* position: fixed; */
+}
+.logo img{
+    width: 60px;
+      /* box-shadow: 1px 1px 1px 1px black; */
+ }
+.sidebar{
+    height: calc(100vh - 9vh);
+    width: 12vw;
+    /* border: 2px solid black; */
+    background: #A7A1FF;
+    position: fixed;
+    padding: 0px;
+    ul{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+     ul a{
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        text-transform: uppercase;
+     }
+     ul a li {
+        /* border: 1px solid white; */
+        height: 8vh;
+        width: 10vw;
+        list-style: none;
+        text-align: center;
+        font-family: "Electrolize", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+     }
+     .rabit{
+        width: 70px;
+        rotate: right;
+        
+     }
+     .rabit:hover{
+        width:100px;
+        transition: all 1ms;
+     }.rabit:active{
+        width:100px;
+        transition: all 1ms;
+     }
+ }
+ .rightLog{
+    height: calc(100vh - 9vh);
+    background-color: rgb(255, 255, 255);
+ }
+
