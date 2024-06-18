@@ -30,10 +30,14 @@ header{
     justify-content: space-around;
     align-items: center;
     background: #ccc9fa;
+    position: sticky;
+    /* z-index: 20px; */
     div a{
         text-decoration: none;
         color: black;
     }
+    
+
 /* position: fixed; */
 }
 .logo img{
@@ -52,7 +56,7 @@ header{
     /* border: 2px solid black; */
     background: #A7A1FF;
     /* background: #8292F8; */
-    /* position: fixed; */
+    position: sticky;
     /* padding: 0px; */
     ul{
         /* margin-top: 20px; */
@@ -125,4 +129,58 @@ header{
   font-style: normal;
   }
  }
-
+.transactions{
+   padding: 20px;
+   background: #aeaae0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   margin-top: 5px;
+   #expenditure{
+      width: 160px;
+      height: 5vh;
+      background:#A7A1FF;
+      color: rgb(0, 0, 0);
+      border-radius: 10px;
+      border: 2px solid white;
+   }
+   #description{
+      width: 250px;
+      height: 5vh;
+      padding: 4px;
+      border-radius: 10px;
+      border: 2px solid white;
+   }
+   #amount{
+      width: 250px;
+      height: 5vh;
+      padding: 4px;
+      border-radius: 10px;
+      border: 2px solid white;
+   }
+   button{
+      margin: 10px;
+      padding: 2px;
+      background:#f9abef;
+      color: beige;
+      width: 150px;
+      height: 5.5vh;
+      border-radius: 10px;
+      border: 2px solid rgb(204, 158, 88) ;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  }
+  button:hover{
+   background: #4e364e;
+   color: white;
+}
+button:active{
+   background: #4e364e;
+   color: white;
+}
+   
+}
