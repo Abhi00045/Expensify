@@ -45,6 +45,11 @@
     width: 60px;
       /* box-shadow: 1px 1px 1px 1px black; */
  }
+ footer{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+ }
 .totalSheet{
     /* border:1px solid black ; */
     display: flex;
@@ -55,6 +60,7 @@
   font-weight: weight;
   font-style: normal;
   padding: 5px;
+  width: 88vw;
   /* color: whitesmoke; */
   background-color: #C4CCD5;
   #balances{
@@ -109,6 +115,53 @@ span{
   font-weight: 600;
   font-style: normal; 
 }
+.sidebar{
+    height: 91vh;
+    width: 12vw;
+    /* border: 2px solid black; */
+    background: #A7A1FF;
+    /* background: #8292F8; */
+    position: sticky;
+    top: 0;
+    /* padding: 0px; */
+    ul{
+        /* margin-top: 20px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+     ul a{
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        text-transform: uppercase;
+     }
+     ul a li {
+        /* border: 1px solid white; */
+        margin-top: 40px;
+        height: 8vh;
+        width: 10vw;
+        list-style: none;
+        text-align: center;
+        font-family: "Electrolize", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+     }
+     .rabit{
+        width: 70px;
+        rotate: right;
+        
+     }
+     .rabit:hover{
+        width:100px;
+        transition: all 1ms;
+     }.rabit:active{
+        width:100px;
+        transition: all 1ms;
+     }
+ }
     </style>
 </head>
 <body>
@@ -116,7 +169,6 @@ span{
         <div class="logo">
             <a href="index.html"><img src="grape-fruit-yuzu-icon.webp" alt="logo"></a>
         </div>
-        <div class="dashboard"><a href="dashboard.html" class="new">Dashboard</a></div>
         <div class="home"><a href="index.html">Home</a></div>
         <div class="income"><a href="login.html">Log out</a></div>
 <style>
@@ -130,48 +182,64 @@ table td,tr{
 }
 </style>
     </header>
-    <div class="totalSheet">
-        <div class="totalIncome"><h2>Total Balance</h2>
-       <h3 id="balances">$0</h3></p></div>
-        <div class="totalSavings">
-           <h2>Total Income</h2>
-           <h3 id="Savings">$0</h3>
+    <footer>
+        <div class="sidebar">
+            <ul>
+                <a href="dashboard.html" class="new"><li>Dashboard</li></a>
+                <a href="#" class="new"  id="chart"><li>chart</li></a>
+                
+                <a href="tax.html" class="new" id="tax"><li>Tax</li></a>
+                
+                <a href="Ai.html" class="new" id="Ai"><li><img class="rabit" src="0863774f6a31996a4edc74e1ec2c7d86.gif" alt="Ai">
+                <p>AI</p></li></a>
+                
+            </ul>
         </div>
-        <div class="totalExpensives">
-           <h2>Spendings</h2>
-           <h3 id="Spendings">$0</h3>
+        <div class="right">
+            <div class="totalSheet">
+                <div class="totalIncome"><h2>Total Balance</h2>
+               <h3 id="balances">$0</h3></p></div>
+                <div class="totalSavings">
+                   <h2>Total Income</h2>
+                   <h3 id="Savings">$0</h3>
+                </div>
+                <div class="totalExpensives">
+                   <h2>Spendings</h2>
+                   <h3 id="Spendings">$0</h3>
+                </div>
+           </div>
+            <main>
+                <div class="heading"><h1>Calculate and Pay tax</h1></div>
+                <table style="width:700px">
+                    <tr>
+                        <th>Income Thresold</th>
+                        <th>Tax Rate</th>
+                    </tr>
+                    <tr>
+                        <td>Income above <span>$1000000.0</span></td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>Income above <span>$700000.0</span></td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>Income above <span>$500000.0</span></td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Income above <span>$300000.0</span></td>
+                        <td>5%</td>
+                    </tr>
+                </table>
+                <button class="calculate" id="calculate">Calculate Tax</button>
+                <h3>Tax to Pay : <span id="payable">$0</span></h3>
+                <h3>Amount left after tax : <span id="leftAmount">$0</span></h3>
+                <button class="pay" id="pay">Pay tax</button>
+                
+            </main>
         </div>
-   </div>
-    <main>
-        <div class="heading"><h1>Calculate and Pay tax</h1></div>
-        <table style="width:700px">
-            <tr>
-                <th>Income Thresold</th>
-                <th>Tax Rate</th>
-            </tr>
-            <tr>
-                <td>Income above <span>$1000000.0</span></td>
-                <td>20%</td>
-            </tr>
-            <tr>
-                <td>Income above <span>$700000.0</span></td>
-                <td>15%</td>
-            </tr>
-            <tr>
-                <td>Income above <span>$500000.0</span></td>
-                <td>10%</td>
-            </tr>
-            <tr>
-                <td>Income above <span>$300000.0</span></td>
-                <td>5%</td>
-            </tr>
-        </table>
-        <button class="calculate" id="calculate">Calculate Tax</button>
-        <h3>Tax to Pay : <span id="payable">$0</span></h3>
-        <h3>Amount left after tax : <span id="leftAmount">$0</span></h3>
-        <button class="pay" id="pay">Pay tax</button>
-        
-    </main>
+    </footer>
     <script src="tax.js"></script>
 </body>
 </html>

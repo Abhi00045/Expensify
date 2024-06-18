@@ -146,4 +146,37 @@ addBtn.addEventListener("click",()=>{
 //    div.appendChild(h2);
 //    action.appendChild(div);
 //    h2.innerHTML="Still working on it...";
+// }
+// let chart = document.getElementById("chart");
+
+// chart.addEventListener("click",function(){
+//     // transactions.style.visibility="hidden";
+// newThing.style.visibility="hidden";
+// let arr = localStorage.getItem("array");
+// arr=JSON.parse(arr);
+// arr.forEach(element=>{
+//     const ctx = document.getElementById('myChart');
+
+//   new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+//       datasets: [{
+//         label: '# of Votes',
+//         data: [12, 19, 3, 5, 2, 3],
+//         borderWidth: 1
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         y: {
+//           beginAtZero: true
+//         }
+//       }
+//     }
+//   });
+// //   ctx.style.width="200px";
+//   transactionHistory.appendChild(ctx);
+// })
+
 // })

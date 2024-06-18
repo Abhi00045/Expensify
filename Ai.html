@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabi's AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Noto Sans Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "width" 100;
+    background-color: #f7f5f3;
+}
+header{
+    height: 9vh;
+    /* width: 100vw; */
+    /* border: 1px solid blue; */
+    border-radius: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: #f6d3f1;
+    position: sticky;
+    /* z-index: 20px; */
+    div a{
+        text-decoration: none;
+        color: black;
+    }
+    
+
+/* position: fixed; */
+}
+.logo img{
+    width: 60px;
+      /* box-shadow: 1px 1px 1px 1px black; */
+ }
+ section{
+    display: flex;
+    flex-direction: row;
+    /* gap: 30px; */
+    /* flex-wrap: wrap; */
+    
+ }
+.sidebar{
+    height: 91vh;
+    width: 16vw;
+    /* border: 2px solid black; */
+    background: #A7A1FF;
+    /* background: #8292F8; */
+    position: sticky;
+    top: 0;
+    /* padding: 0px; */
+    ul{
+        /* margin-top: 20px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+     ul a{
+        text-decoration: none;
+        color: black;
+        text-align: center;
+        text-transform: uppercase;
+     }
+     ul a li {
+        /* border: 1px solid white; */
+        margin-top: 40px;
+        height: 8vh;
+        width: 10vw;
+        list-style: none;
+        text-align: center;
+        font-family: "Electrolize", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+     }
+     .rabit{
+        width: 70px;
+        rotate: right;
+        
+     }
+     .rabit:hover{
+        width:100px;
+        transition: all 1ms;
+     }.rabit:active{
+        width:100px;
+        transition: all 1ms;
+     }
+ }
+ .right{
+    width: 88vw;
+    height: 91vh;
+    background:#f7f5f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* padding: 20px; */
+ }
+ .bodies{
+    margin: 20px;
+    margin-left: 130px;
+ }
+ #head{
+    font-size: 90px;
+    font-family: "Abril Fatface", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 80px;
+        color: #342936;
+        span{
+            color: #F6C1EF;
+        text-shadow: 3px 0  rgb(204, 158, 88), 0 2px rgb(204, 158, 88), 2px 0  rgb(198, 148, 73), 0 2px  rgb(204, 158, 88);
+        font-size: 90px
+        }
+ }
+ .footer{
+    margin-left: 130px;
+    margin-bottom: 10px;
+    input{
+        height: 8vh;
+             width: 60vw;
+             border-radius: 20px ;
+             border: 1px solid black;
+             box-shadow: 1px 1px 1px 1px solid black;
+             font-size: 18px;
+             padding: 10px;
+    }
+ }
+ button{
+    margin: 10px;
+    padding: 2px;
+    background:#f9abef;
+    color: beige;
+    width: 150px;
+    height: 5.5vh;
+    border-radius: 10px;
+    border: 2px solid rgb(204, 158, 88) ;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: 600;
+font-size: 15px;
+cursor: pointer;
+text-decoration: none;
+        color: rgb(34, 34, 34);
+}
+button:hover{
+    background: #4e364e;
+    color: white;
+}
+button:active{
+    background: #4e364e;
+    color: white;
+}
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="grape-fruit-yuzu-icon.webp" alt="logo"></a>
+        </div>
+        <div class="home"><a href="index.html">Home</a></div>
+        <div class="income"><a href="login.html">Log out</a></div>
+
+    </header>
+    <section>
+        <div class="sidebar">
+            <ul>
+                <a href="dashboard.html" class="new"><li>Dashboard</li></a>
+                <a href="#" class="new"  id="chart"><li>chart</li></a>
+                
+                <a href="tax.html" class="new" id="tax"><li>Tax</li></a>
+                <a href="Ai.html" class="new" id="Ai"><li><img class="rabit" src="0863774f6a31996a4edc74e1ec2c7d86.gif" alt="Ai">
+                </li></a> 
+            </ul>
+        </div>
+        <div class="right">
+            <div class="bodies" id="bodies">
+                <h1 id="head">Hey,<span id="nam">Travis</span><br>How can I help <span>you</span> today?
+                </h1>
+                <img src="https://clipart-library.com/images/yckrG4G5i.gif" alt="log" width="170px" >
+            </div>
+            <div id="chat-box"></div>
+            <div class="footer">
+                <input type="search" id="search" placeholder="write your Queries here...">
+                <button id="btn">Search</button>
+            </div>
+        </div>
+        <!-- <p>Rabi's may display inaccurate info, including about people, so double-check its responses. Your privacy & AI Apps</p> -->
+    </section>
+    <script src="Ai.js"></script>
+</body>
+</html>

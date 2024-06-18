@@ -22,7 +22,7 @@ body{
 }
 header{
     height: 9vh;
-    width: 100vw;
+    /* width: 100vw; */
     /* border: 1px solid blue; */
     border-radius: 2px;
     display: flex;
@@ -47,7 +47,7 @@ header{
  section{
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    /* gap: 30px; */
     /* flex-wrap: wrap; */
     
  }
@@ -98,13 +98,14 @@ header{
         transition: all 1ms;
      }
  }
- .rightLog{
-    width: calc(100vw - 14vw);
-    padding: 20px;
+ /* .rightLog{
+    width: 88vw;
+    /* padding: 20px; */
     /* border: 1px solid blue; */
- }
- .rightLog .totalSheet{
+ 
+.totalSheet{
     /* border:1px solid black ; */
+    width: 88vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
