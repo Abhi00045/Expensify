@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
 
 *{
     margin: 0;
@@ -18,6 +18,7 @@ body{
   font-style: normal;
   font-variation-settings:
     "width" 100;
+    background-color: #f7f5f3;
 }
 header{
     height: 9vh;
@@ -39,15 +40,22 @@ header{
     width: 60px;
       /* box-shadow: 1px 1px 1px 1px black; */
  }
+ section{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    /* flex-wrap: wrap; */
+ }
 .sidebar{
-    height: calc(100vh - 9vh);
+    height: 91vh;
     width: 12vw;
     /* border: 2px solid black; */
     background: #A7A1FF;
-    position: fixed;
-    padding: 0px;
+    /* background: #8292F8; */
+    /* position: fixed; */
+    /* padding: 0px; */
     ul{
-        margin-top: 20px;
+        /* margin-top: 20px; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -62,12 +70,13 @@ header{
      }
      ul a li {
         /* border: 1px solid white; */
+        margin-top: 40px;
         height: 8vh;
         width: 10vw;
         list-style: none;
         text-align: center;
         font-family: "Electrolize", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-style: normal;
      }
      .rabit{
@@ -84,7 +93,36 @@ header{
      }
  }
  .rightLog{
-    height: calc(100vh - 9vh);
-    background-color: rgb(255, 255, 255);
+    width: calc(100vw - 14vw);
+    padding: 20px;
+    /* border: 1px solid blue; */
+ }
+ .rightLog .totalSheet{
+    /* border:1px solid black ; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  padding: 10px;
+  /* color: whitesmoke; */
+  background-color: #C4CCD5;
+  #balances{
+    font-family: "Bungee Hairline";
+  font-weight: 600;
+  font-style: normal;
+  }
+  #Savings{
+    font-family: "Bungee Hairline";
+  font-weight: 600;
+  font-style: normal;
+  }
+  #Spendings{
+    font-family: "Bungee Hairline";
+  font-weight: 600;
+  font-style: normal;
+  }
  }
 

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Manrope:wght@200..800&family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
@@ -12,8 +15,8 @@
             <div class="logo">
                 <a href="index.html"><img src="/grape-fruit-yuzu-icon.webp" alt="logo"></a>
             </div>
-            <div class="home"><a href="">Home</a></div>
-            <div class="income"><a href="#">Log out</a></div>
+            <div class="home"><a href="index.html">Home</a></div>
+            <div class="income"><a href="login.html">Log out</a></div>
 
         </header>
         <section>
@@ -29,9 +32,37 @@
                     
                 </ul>
             </div>
-            <div class="rightLog"></div>
+            <div class="rightLog">
+                <div class="totalSheet">
+                     <div class="totalIncome"><h2>Total Balance</h2>
+                    <h3 id="balances">$0</h3></p></div>
+                     <div class="totalSavings">
+                        <h2>Total Income</h2>
+                        <h3 id="Savings">$0</h3>
+                     </div>
+                     <div class="totalExpensives">
+                        <h2>Spendings</h2>
+                        <h3 id="Spendings">$0</h3>
+                     </div>
+                </div>
+                <div class="transactions">
+                    <select name="Income" id="expenditure">
+                        <option value="Income" id="income">Income</option>
+                        <option value="Expenses" id="expenses">Expenses</option>
+                        <br>
+                        <input type="text" id="description" placeholder="Description">
+                        <br>
+                        <input type="number" id="amount" placeholder="$0.00">
+                        <button id="Add" class="Add">Add</button>
+                    </select>
+                </div>
+                <div class="transactionHistory" id="transactionHistory">
+                    <h1>Transaction History</h1>
+                </div>
+            </div>
         </section>
 
     </main>  
+    <script src="dashboard.js"></script>
 </body>
 </html>
