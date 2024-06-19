@@ -19,8 +19,9 @@ body{
   font-variation-settings:
     "width" 100;
     background-color: #f7f5f3;
+    overflow-x: hidden;
 }
-header{
+nav{
     height: 9vh;
     /* width: 100vw; */
     /* border: 1px solid blue; */
@@ -30,14 +31,13 @@ header{
     justify-content: space-around;
     align-items: center;
     background: #f6d3f1;
-    position: sticky;
+    position:sticky;
+    top: 0px;
     /* z-index: 20px; */
     div a{
         text-decoration: none;
         color: black;
     }
-    
-
 /* position: fixed; */
 }
 .logo img{
@@ -53,12 +53,12 @@ header{
  }
 .sidebar{
     height: 91vh;
-    width: 12vw;
+    width: 11vw;
     /* border: 2px solid black; */
     background: #A7A1FF;
     /* background: #8292F8; */
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 63px;
     /* padding: 0px; */
     ul{
         /* margin-top: 20px; */
@@ -98,14 +98,13 @@ header{
         transition: all 1ms;
      }
  }
- /* .rightLog{
-    width: 88vw;
-    /* padding: 20px; */
-    /* border: 1px solid blue; */
+ .rightLog{
+    margin-left: 11.7vw;
+ }
  
 .totalSheet{
     /* border:1px solid black ; */
-    width: 88vw;
+    width: 86vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
