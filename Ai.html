@@ -122,14 +122,11 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* margin-left: 5vw; */
     
     /* align-items: center; */
     padding: 10px;
     /* margin-top: 20px; */
- }
- .bodies{
-    margin: 20px;
-    margin-left: 130px;
  }
  #head,#second{
     font-size: 90px;
@@ -250,7 +247,7 @@ button:active{
         const prompt = value;
 
         // Display the user's input
-        addMessage(prompt, "user-message", "User","rabis.webp");
+        addMessage(prompt, "user-message", "User","luffy.gif");
 
         try {
           const result = await model.generateContent(prompt);
@@ -265,7 +262,7 @@ button:active{
             x,
             "ai-message",
             "Gemini",
-            "geimi-removebg-preview.png"
+            "chopper.jpg"
           );
           document.getElementById("text").value = "";
         } catch (error) {
@@ -288,7 +285,7 @@ button:active{
         img.src = imgSrc;
         img.alt = sender;
         img.className = "chat-img";
-        img.style.width="20px";
+        img.style.height="50px";
 
         const textNode = document.createElement("span");
         textNode.innerHTML = text;
@@ -307,7 +304,11 @@ button:active{
             run();
           }
         });
-       
+        let nam = document.getElementById("nam");
+        window.addEventListener("load",()=>{
+          let travis = localStorage.getItem("Name");
+          nam.innerHTML=travis;
+        })
     </script>
   </body>
 </html>
