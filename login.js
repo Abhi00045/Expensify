@@ -9,6 +9,10 @@ login.addEventListener("click",()=>{
     }else if(password.value != localStorage.Password){
          alert("Incorrect Password");
     }else{
+        // myFunc();
         alert("logged in successfully");
     }
 })
+// function myFunc(){
+//    location.replace=("http://127.0.0.1:5500/dashboard.html");
+// }

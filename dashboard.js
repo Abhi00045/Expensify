@@ -118,7 +118,7 @@ addBtn.addEventListener("click",()=>{
 //     let action = document.getElementById("action");
 // let tax = document.getElementById("tax");
 // let transactions = document.getElementById("transactions");
-// let newThing=document.getElementById("newthing");
+let newThing=document.getElementById("newthing");
 // let transactionHistory=document.getElementById("transactionHistory");
 
 
@@ -147,37 +147,41 @@ addBtn.addEventListener("click",()=>{
 //    action.appendChild(div);
 //    h2.innerHTML="Still working on it...";
 // }
-// let chart = document.getElementById("chart");
+let chart = document.getElementById("chart");
 
-// chart.addEventListener("click",function(){
-//     // transactions.style.visibility="hidden";
-// newThing.style.visibility="hidden";
-// let arr = localStorage.getItem("array");
-// arr=JSON.parse(arr);
+chart.addEventListener("click",function(){
+    // transactions.style.visibility="hidden";
+newThing.style.display="none";
+let arr2 = localStorage.getItem("array");
+arr2=JSON.parse(arr2);
+const {amount,balance,income,spendings} = arr2[arr2.length-1]
+console.log(amount,balance,income,spendings)
+
 // arr.forEach(element=>{
-//     const ctx = document.getElementById('myChart');
+    const ctx = document.getElementById('myChart');
+    ctx.style.width="200px";
 
-//   new Chart(ctx, {
-//     type: 'bar',
-//     data: {
-//       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-//       datasets: [{
-//         label: '# of Votes',
-//         data: [12, 19, 3, 5, 2, 3],
-//         borderWidth: 1
-//       }]
-//     },
-//     options: {
-//       scales: {
-//         y: {
-//           beginAtZero: true
-//         }
-//       }
-//     }
-//   });
-// //   ctx.style.width="200px";
-//   transactionHistory.appendChild(ctx);
-// })
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green'],
+      datasets: [{
+        label: '# of Votes',
+        data: [amount,balance,income,spendings],
+        borderWidth: 1,
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+   
+  transactionHistory.appendChild(ctx);
+});
 
 // })
 
