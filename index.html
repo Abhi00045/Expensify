@@ -3,53 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expensify</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Expensive tracker</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    </head>
 <body>
+    
+    <nav>
+        <div class="one" id="one">
+            <img src="https://android.giveawayoftheday.com/wp-content/plugins/gotd_googleplay_plugin/images/2019/03/com.waynejohnson.dailyexpensetracker_app_icon_1551695948.png" alt="logo">
+        </div>
+        <div class="two" id="two">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+        </div>
+        <div class="three" id="three">
+            <ul>
+                <li onclick="login()"><a href="#"><button>Login</button></a></li>
+                <li class="signup" onclick="signup()"><a href="#"><button>Signup <span class="material-symbols-outlined">arrow_forward</span></button></a> </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <hr> -->
     <main>
-        <header>
-            <div class="logo">
-                <a href="index.html"><img src="grape-fruit-yuzu-icon.webp" alt="logo"></a>
-                <!-- <h1>Expensify</h1> -->
-            </div>
-            <div class="menu">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                </ul>
-            </div>
-            <div class="getStarted">
-                <a class="hi" href="login.html">Log in</a>
-                
-                <button><a  href="signup.html">Get Started</a></button>
-            </div>
-        </header>
-        <hr>
-        <section>
-            <div class="heading">
                 <div class="first">
                     <h1><span>S</span>implify your
                         <br><span>f</span> inancial life today.
                     </h1>
-                </div>
-                <div class="para">
-                    <p>with Expensify dashboard , view your balances , transaction history and pay taxes</p>
-                </div>
-                <div class="original">
-                    <button><a href="signup.html">Get Started</a></button>
-                </div>
+                    <div class="para">
+                        <p>with Expensify dashboard you can view your Balances , Transaction-history and Pay-taxes</p>
+                    </div>
+                    <div class="original">
+                        <button id="orginal-btn"><a href="signup.html">Get Started</a></button>
+                    </div>
                 </div>
                 <div class="second" id="second">
-                    <img id="graphic" src="Academy-Hero-img-1.avif" alt="img">
+                    <img  id="graphic" src="https://cdni.iconscout.com/illustration/premium/thumb/expense-managing-app-illustration-download-in-svg-png-gif-file-formats--management-budget-accounting-business-concept-pack-illustrations-3561011.png" alt="img">
                 </div>
-        </section>
+
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
