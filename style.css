@@ -154,3 +154,112 @@ main {
         
     } */
 }
+
+.third{
+    border: 4px solid yellow;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 100px;
+    padding: 10px;
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        div h1{
+            font-family: "Abril Fatface", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+            text-align: center;
+        }
+        .input{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input{
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid black;
+                background-color: none;
+            }
+        }
+        .forget{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            div a{
+                text-decoration:underline;
+                color: rgb(255, 255, 255);
+            }
+        }
+        input[type="submit"]{
+            background-color: #f1fe69;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+        }
+
+}
+
+.fourth{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+    padding: 10px;
+    color: white;
+    height: 400px;
+    width: 400px;
+    margin-top: 10px;
+    border: 4px solid yellow;
+    border-radius: 10px;
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        div h1{
+            font-family: "Abril Fatface", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 30px;
+            text-align: center;
+        }
+        .input{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input{
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid black;
+                background-color: none;
+            }
+        }
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+             a{
+                text-decoration:underline;
+                color: rgb(255, 255, 255);
+            }
+        }
+        input[type="submit"]{
+            background-color: #f1fe69;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+        }
+}
