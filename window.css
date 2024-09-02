@@ -103,13 +103,123 @@ main{
     /* gap: 100px; */
 }
 #left{
-    height: calc(100vh - 12vh);
-    width: 7vw;
-    border: 2px solid green;
+    margin-top: 10px;
+    height: calc(100vh - 13vh);
+    width: 15vw;
+    /* border: 2px solid green; */
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+
+    .left-menu{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        background-color: rgb(48, 48, 48);
+        /* margin-top: 15px; */
+
+    }
+    .Dashboard{
+        padding: 10px;
+        /* font-size: 4px; */
+    }
+    .chart{
+        padding: 10px;
+        /* font-size: 15px; */
+    }
+    .tax{
+        padding: 10px;
+        /* font-size: 15px; */
+    }
+    .Ai{
+        padding: 10px;
+        /* font-size: 20px; */
+    }
+
 }
 .right{
     width: calc(100vw - 7vw);
     height: calc(100vh - 12vh);
-    border: 2px solid yellow;
-    margin-left: 10vw;
+    /* border: 2px solid yellow; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* gap: 100px; */
+    /* overflow-y: scroll; */
+    .entries{
+        padding: 15px;
+        background-color: rgb(48, 48, 48);
+    }
 }
+.log-entries{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+    .income{
+        h1{
+            font-family: "Abril Fatface", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+    .expenses{
+        h1{
+            font-family: "Abril Fatface", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+    .Balance{
+        h1{
+            font-family: "Abril Fatface", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+}
+.input-entries{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    div button{
+        width: 9%;
+        align-self: flex-end;
+        padding: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        font-size: 20px;
+
+        }
+}
+input{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;    
+    font-size: 20px;
+    font-weight: 200;
+    font-family: "Teko", sans-serif;
+}
+label{  
+    font-size: 20px;
+    font-weight: 800;
+    font-family: "Teko", sans-serif;
+}
+select{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90%;    
+    font-size: 20px;
+    font-weight: 200;
+    font-family: "Teko", sans-serif;
+}
+
