@@ -27,8 +27,8 @@
         </div>
         <div class="three" id="three">
             <ul>
-                <li onclick="login()"><a href="#"><button>Login</button></a></li>
-                <li class="signup" onclick="signup()"><a href="#"><button>Signup <span class="material-symbols-outlined">arrow_forward</span></button></a> </li>
+                <li id="log" onclick="login()"><a href="#"><button>Login</button></a></li>
+                <li id="sig" class="signup" onclick="signup()"><a href="#"><button >Signup <span class="material-symbols-outlined">arrow_forward</span></button></a> </li>
             </ul>
         </div>
     </nav>
@@ -51,7 +51,7 @@
 
                 <!-- thridLogin Credintaial -->
                 <div class="third" id="third">
-                    <form action="">
+                    <form id="login-Form">
                         <div><h1>Login</h1></div>
                         <div class="input">
                          <input type="email" name="email" id="loginEmail" placeholder="Email" required>

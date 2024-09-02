@@ -6,9 +6,13 @@ let fourth = document.getElementById("fourth");
 let loginLink = document.getElementById("loginLink");
 let loginBtn = document.getElementById("loginBtn");
 let form = document.getElementById("form");
-// let data= JSON.parse(localStorage.getItem("userInfo")) || [];
-// console.log(data)
+let log = document.getElementById("log");
+let sig = document.getElementById("sig");
+let loginForm = document.getElementById("login-Form");
 let data =[];
+
+let dataPack= JSON.parse(localStorage.getItem("userInfo")) || [];
+// console.log(dataop.email);
 
 window.addEventListener("load",(e)=>{
     third.style.display="none";
@@ -21,6 +25,7 @@ function signup(){
     second.style.display="none";
     third.style.display="none";
     fourth.style.display="block";
+    sig.style.display="none";
 }
 
 function login(){
@@ -29,6 +34,7 @@ function login(){
     second.style.display="none";
     third.style.display="block";
     fourth.style.display="none";
+    log.style.display="none";
 }  
 
 loginLink.addEventListener("click",(e)=>{
@@ -36,21 +42,18 @@ loginLink.addEventListener("click",(e)=>{
     fourth.style.display="none";
 })
 
-loginBtn.addEventListener("click",(e)=>{
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-    console.log(email,password);
+loginForm.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    let writtenEmail = document.getElementById("loginEmail").value;
+    let writtenPassword = document.getElementById("loginPassword").value;
+    if(writtenEmail !== dataPack.email || writtenEmail === ""){
+        alert("incorret mail");
+    }else if(writtenPassword !== dataPack.password || writtenPassword===""){
+        alert("incorrect Password");
+    }else{
+        // window.open("https://leetcode.com/problems/unique-number-of-occurrences/description/");
+    }
 
-    if(email == "" || password == ""){
-        alert("please enter email and password");
-    }
-    else{
-        let Previous = localStorage.getItem("email");
-        let PreviousPassword = localStorage.getItem("password");
-        if(email == Previous && password == PreviousPassword){
-            alert("login success");
-    }
-}
 })
 
 form.addEventListener("submit",(e)=>{
@@ -64,9 +67,9 @@ form.addEventListener("submit",(e)=>{
         alert("please enter name , email and password");
     }else{
         localStorage.setItem("userInfo" , JSON.stringify({name , email , password}));
-         let SignupDetails={Name : name,
-            Email:email,
-            Password:password
+         let SignupDetails={name,
+           email,
+            password
          };
          data.push(SignupDetails);
          console.log(data);  
