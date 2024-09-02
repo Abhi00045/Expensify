@@ -47,6 +47,7 @@ loginBtn.addEventListener("click",(e)=>{
         if(email == Previous && password == PreviousPassword){
             alert("login success");
     }
+}
 })
 
 signupBtn.addEventListener("click",(e)=>{
