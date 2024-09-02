@@ -42,7 +42,7 @@
                         <p>with Expensify dashboard you can view your Balances , Transaction-history and Pay-taxes</p>
                     </div>
                     <div class="original">
-                        <button id="orginal-btn"><a href="signup.html">Get Started</a></button>
+                        <button id="orginal-btn" onclick="signup()"><a>Get Started</a></button>
                     </div>
                 </div>
                 <div class="second" id="second">
@@ -54,8 +54,8 @@
                     <form action="">
                         <div><h1>Login</h1></div>
                         <div class="input">
-                            <input type="email" name="email" id="email" placeholder="Email" required>
-                        <input type="password" name="password" id="password" placeholder="Password" required>
+                         <input type="email" name="email" id="loginEmail" placeholder="Email" required>
+                         <input type="password" name="password" id="loginPassword" placeholder="Password" required>
                         </div>
                         <div class="forget">
                            <div>
@@ -73,7 +73,7 @@
                 <!-- fourthSignupcredintials -->
 
                 <div class="fourth" id="fourth">
-                    <form action="">
+                    <form id="form">
                         <div><h1>Signup</h1></div>
                         <div class="input">
                             <input type="text" name="name" id="name" placeholder="Name" required>
