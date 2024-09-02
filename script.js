@@ -51,7 +51,8 @@ loginForm.addEventListener("submit",(e)=>{
     }else if(writtenPassword !== dataPack.password || writtenPassword===""){
         alert("incorrect Password");
     }else{
-        // window.open("https://leetcode.com/problems/unique-number-of-occurrences/description/");
+        alert("Login Successfull")
+        // window.open("window.html");
     }
 
 })
