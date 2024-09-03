@@ -37,8 +37,15 @@
     <main>
         <div class="left" id="left">
             <div class="left-menu">
-                <div class="Dashboard">
-                    <h3 id="DashBoard">DashBoard</h3>
+                <div class="Dashboard" id="DashBoard">
+                    <style>
+                        .Dashboard:hover{
+                        background-color: rgb(98, 96, 96);
+                        border-radius: 20px;
+                        cursor: pointer;
+                    }
+                    </style>
+                    <h3>DashBoard</h3>
                 </div>
                 <hr>
                 <div class="chart" id="chart"><style>
@@ -142,9 +149,15 @@
 
               </div>
               <div class="entries-Ai" id="entries-Ai"></div>
-              <div class="entriesChart" id="entriesChart"></div>
+              <div class="entriesChart" id="entriesChart">
+                <div>
+                    <canvas id="myChart" ></canvas>
+                  </div>
+                  
+              </div>
         </div>
     </main>
     <script src="window.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 let data=[];
+let arr = data;
 let displayedData=[];
 
 let inputEntries = document.getElementById("input-entries");
@@ -305,5 +306,59 @@ calculate.addEventListener("click",()=>{
        })
 
    })
+})
+
+chart.addEventListener("click",()=>{
+    inputEntries.style.display="none";
+    entriesList.style.display="none";
+    // chart.style.display="block";
+    entriesChart.style.display="block";
+    // Ai.style.display="none";
+    entriesAi.style.display="none";
+    entriesTax.style.display="none";
+
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow'],
+        datasets: [{
+          label: '# of Votes',
+          data: arr,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+})
+
+
+Ai.addEventListener("click",()=>{
+    inputEntries.style.display="none";
+    entriesList.style.display="none";
+    // chart.style.display="block";
+    entriesChart.style.display="none";
+    // Ai.style.display="none";
+    entriesAi.style.display="block";
+    entriesTax.style.display="none";
+
+})
+
+let DashBoard = document.getElementById("DashBoard");
+DashBoard.addEventListener("click",()=>{
+    inputEntries.style.display="block";
+    entriesList.style.display="none";
+    // chart.style.display="block";
+    entriesChart.style.display="none";
+    // Ai.style.display="none";
+    entriesAi.style.display="none";
+    entriesTax.style.display="none";
 })
 // let pay = document.getElementById("pay");
