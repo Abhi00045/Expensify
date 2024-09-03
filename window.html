@@ -41,16 +41,36 @@
                     <h3 id="DashBoard">DashBoard</h3>
                 </div>
                 <hr>
-                <div class="chart">
-                    <h3 id="chart">Data visualization</h3>
+                <div class="chart" id="chart"><style>
+                    .chart:hover{
+                        background-color: rgb(98, 96, 96);
+                        border-radius: 20px;
+                        cursor: pointer;
+                    }
+                </style>
+                    <h3>Data visualization</h3>
                 </div>
                 <hr>
-                <div class="tax">
-                    <h3 id="tax">Tax Calculator</h3>
+                <div class="tax" id="tax">
+                    <style>
+                        .tax:hover{
+                            background-color: rgb(98, 96, 96);
+                            border-radius: 20px;
+                            cursor: pointer;
+                        }
+                    </style>
+                    <h3>Tax Calculator</h3>
                 </div>
                 <hr>
-                <div class="Ai">
-                    <h3 id="Ai"> Ai Assistant</h3>
+                <div class="Ai" id="Ai">
+                    <style>
+                        .Ai:hover{
+                            background-color: rgb(98, 96, 96);
+                            border-radius: 20px;
+                            cursor: pointer;
+                        }
+                    </style>
+                    <h3> Ai Assistant</h3>
                 </div>
                 <hr>
 
@@ -62,35 +82,67 @@
                 <div class="log-entries" id="log-entries">
                     <div class="income">
                         <h1>Income</h1>
-                        <h1>₹0</h1>
+                        <h1 id="incomeMoney">₹0</h1>
                     </div>
                     <div class="expenses">
                         <h1>Expenses</h1>
-                        <h1>₹0</h1>
+                        <h1 id="expensesMoney">₹0</h1>
                     </div>
                     <div class="Balance">
                         <h1>Balance</h1>
-                        <h1>₹0</h1>
+                        <h1 id="balanceMoney">₹0</h1>
                     </div>
                 </div>
-                <div class="input-entries">
+                <div class="input-entries" id="input-entries">
                     <input type="number" placeholder="Amount" id="entries-amount">
+
                     <!-- <label for="cars">Description:</label> -->
                     <div>
-                        <select name="Expensives-list" id="description-list">
-                            <option value="Grocery">Grocery</option>
-                            <option value="Food">Food</option>
-                            <option value="Travel">Travel</option>
-                            <option value="Shopping">Shopping</option>
-                            <option value="Entertainment">Entertainment</option>
-                            <option value="Others">Others</option>
+                        <input type="text" placeholder="Description" id="description">
+                        <select name="IncomeExpensives" id="income-expensives">
+                            <option value="Income">Income</option>
+                            <option value="Expenses">Expenses</option>
                         </select>
-                        <button>Add</button>
+                        <button id ="add-btn">Add</button>
                     </div>
                 </div>
             </div>
             <!-- Entires-list -->
-            <div class="entries-list" id="entries-list"></div>
+              <div class="entries-list" id="entries-list"></div>
+              <div class="entries-tax" id="entries-tax">
+                <div class="heading"><h1>Calculate and Pay tax</h1></div>
+                <table style="width:700px">
+                    <tr>
+                        <th>Income Thresold</th>
+                        <th>Tax Rate</th>
+                    </tr>
+                    <tr>
+                        <td>Income above <span>$1000000.0</span></td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>Income above <span>$700000.0</span></td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>Income above <span>$500000.0</span></td>
+                        <td>10%</td>
+                    </tr>
+                    <tr>
+                        <td>Income above <span>$300000.0</span></td>
+                        <td>5%</td>
+                    </tr>
+                </table>
+                <div>
+                    <button class="calculate" id="calculate">Calculate Tax</button>
+                <h3>Tax to Pay : <span id="payable">$0</span></h3>
+                <h3>Amount left after tax : <span id="leftAmount">$0</span></h3>
+                <button class="pay" id="pay">Pay tax</button>
+                </div>
+
+              </div>
+              <div class="entries-Ai" id="entries-Ai"></div>
+              <div class="entriesChart" id="entriesChart"></div>
         </div>
     </main>
     <script src="window.js"></script>  

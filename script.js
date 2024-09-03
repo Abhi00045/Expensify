@@ -52,7 +52,7 @@ loginForm.addEventListener("submit",(e)=>{
         alert("incorrect Password");
     }else{
         alert("Login Successfull")
-        // window.open("window.html");
+        window.open("window.html");
     }
 
 })
