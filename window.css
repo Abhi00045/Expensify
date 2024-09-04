@@ -266,3 +266,43 @@ div{
     padding: 30px;
 }
 }
+#myChart {
+   /* margin-top: 100px; */
+    width: 100% !important; /* Adjust as needed */
+    max-width: 600px; /* Example max width */
+    max-height:70vh;
+}
+@media screen and (min-width: 500px) {
+    .zero{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .one{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .two{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .three{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .left{
+        display: none;
+    }
+    .Dashboard{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    
+}
+

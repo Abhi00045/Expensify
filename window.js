@@ -166,6 +166,7 @@ let balance = 0;
     entriesChart.style.display="none";
     // Ai.style.display="none";
     entriesAi.style.display="none";
+    // logEntries.style.display="block";
     
     
 
@@ -248,6 +249,7 @@ tax.addEventListener("click",()=>{
     entriesChart.style.display="none";
     // Ai.style.display="none";
     entriesAi.style.display="none";
+    // logEntries.style.display="block";
 })
 let calculate = document.getElementById("calculate");
 let payable = document.getElementById("payable");
@@ -308,39 +310,75 @@ calculate.addEventListener("click",()=>{
    })
 })
 
-chart.addEventListener("click",()=>{
-    inputEntries.style.display="none";
-    entriesList.style.display="none";
-    // chart.style.display="block";
-    entriesChart.style.display="block";
-    // Ai.style.display="none";
-    entriesAi.style.display="none";
-    entriesTax.style.display="none";
+chart.addEventListener("click", () => {
+    inputEntries.style.display = "none";
+    entriesList.style.display = "none";
+    entriesChart.style.display = "block";
+    entriesAi.style.display = "none";
+    entriesTax.style.display = "none";
+    // logEntries.style.display="block";
 
-    const ctx = document.getElementById('myChart');
-  
+    // Get the chart canvas element
+    const ctx = document.getElementById('myChart').getContext('2d');
+
+    // Prepare data for the chart
+    let income = 0;
+    let expenses = 0;
+
+    // Retrieve data from local storage
+    let dataFromLocalStorage = JSON.parse(localStorage.getItem("data")) || [];
+    console.log(dataFromLocalStorage);
+    
+    income = dataFromLocalStorage[dataFromLocalStorage.length-1].income;
+    expenses = dataFromLocalStorage[dataFromLocalStorage.length-1].expenses;
+
+    // Create or update the chart
     new Chart(ctx, {
-      type: 'pie',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow'],
-        datasets: [{
-          label: '# of Votes',
-          data: arr,
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
+        type: 'pie',
+        data: {
+            labels: ['Income', 'Expenses', 'Balance'],
+            datasets: [{
+                label: 'Financial Overview',
+                data: [income, expenses, income - expenses], // Data points
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',  // Income
+                    'rgba(255, 99, 132, 0.2)',  // Expenses
+                    'rgba(153, 102, 255, 0.2)'  // Balance
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',    // Income border color
+                    'rgba(255, 99, 132, 1)',    // Expenses border color
+                    'rgba(153, 102, 255, 1)'    // Balance border color
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.label + ': ₹' + tooltipItem.raw;
+                        }
+                    }
+                }
+            }
         }
-      }
     });
-})
+});
 
 
-Ai.addEventListener("click",()=>{
+// let logEntries = document.getElementById("log-entries");
+import { GoogleGenerativeAI } from "@google/generative-ai";
+let API_KEY ="AIzaSyAF5NzuxS9Nphv6YE1U07dRzwPuIOHOeY0";
+const genAI = new GoogleGenerativeAI(API_KEY);
+async function getApi() {
+
+
     inputEntries.style.display="none";
     entriesList.style.display="none";
     // chart.style.display="block";
@@ -348,8 +386,52 @@ Ai.addEventListener("click",()=>{
     // Ai.style.display="none";
     entriesAi.style.display="block";
     entriesTax.style.display="none";
+    // logEntries.style.display="none";
 
+    let oneAi = document.getElementById("oneAi");
+
+    let div1 = document.createElement("div");
+    let h3 = document.createElement("h3");
+    div1.appendChild(h3);
+
+
+    let div2 = document.createElement("div");
+    let h23 = document.createElement("p");
+
+    div2.appendChild(h23);
+    oneAi.appendChild(div1);
+    oneAi.appendChild(div2);
+
+    let inputAi = document.getElementById("inputAi");
+
+    
+    async function  clickGrenrate() {
+        let inputAiValue = inputAi.value;
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const prompt = inputAiValue;
+        h3.innerHTML=`--${inputAiValue}`;
+        const result = await model.generateContent(prompt);
+        let res = result.response.text();
+        h23.innerHTML=`--${res}`;
+        console.log(inputAi.value);
+        // clickGrenrate();
+        console.log(result.response.text());
+
+    }
+    let aiGeneratebtn = document.getElementById("Ai-Generate");
+    aiGeneratebtn.addEventListener("click",()=>{
+        clickGrenrate();
+        inputAi.value="";
+    });
+
+    
+}
+Ai.addEventListener("click",()=>{
+    getApi()
 })
+
+
+
 
 let DashBoard = document.getElementById("DashBoard");
 DashBoard.addEventListener("click",()=>{
@@ -360,5 +442,6 @@ DashBoard.addEventListener("click",()=>{
     // Ai.style.display="none";
     entriesAi.style.display="none";
     entriesTax.style.display="none";
+    // logEntries.style.display="block";
 })
 // let pay = document.getElementById("pay");

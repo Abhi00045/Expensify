@@ -86,6 +86,12 @@
         <div class="right">
             <!-- <h1>DashBoard</h1> -->
             <div class="entries" id="entries">
+                <!-- <style>
+                    /* .log-entries{
+                        position: sticky;
+                         top: 0px;
+                    } */
+                </style> -->
                 <div class="log-entries" id="log-entries">
                     <div class="income">
                         <h1>Income</h1>
@@ -148,7 +154,47 @@
                 </div>
 
               </div>
-              <div class="entries-Ai" id="entries-Ai"></div>
+              <div class="entries-Ai" id="entries-Ai" >
+                <style>
+                    .headingAi{
+                        /* margin-top: 10px; */
+                        display: flex;
+                        flex-direction: column;
+                        border: 2px solid yellow;
+                        color: white;
+                        padding: 20px;
+                        width: 100%;
+                        flex-wrap: wrap;
+                        overflow: hidden;
+                        /* overflow-y: scroll; */
+                        h1{
+                            text-align: center;
+                        }
+                    }
+                    .oneAi{
+                        width: 100% ;
+                        /* border: 2px solid green; */
+                        margin-bottom: 10px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        overflow-y: hidden;
+                        flex-direction: column;
+                        gap: 10px;
+                        
+                    }
+
+                    
+                </style>
+                <div class="headingAi"><h1>Get Ai Assistant</h1>
+                    <div class="oneAi" id="oneAi"></div>
+                    <div class="twoAi">
+                        <div class="Ai-Text">
+                           <input id="inputAi" type="text" width="70%" height="6vh">
+                        </div>
+                        <button class="Ai-Generate" id="Ai-Generate">Generate</button>
+                    </div>
+                </div>
+             </div>
               <div class="entriesChart" id="entriesChart">
                 <div>
                     <canvas id="myChart" ></canvas>
@@ -157,7 +203,14 @@
               </div>
         </div>
     </main>
-    <script src="window.js"></script>  
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+    <script src="window.js" type="module"></script>  
 </body>
 </html>

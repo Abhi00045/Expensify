@@ -51,8 +51,8 @@ loginForm.addEventListener("submit",(e)=>{
     }else if(writtenPassword !== dataPack.password || writtenPassword===""){
         alert("incorrect Password");
     }else{
-        alert("Login Successfull")
-        window.open("window.html");
+        alert("Login Successfull");
+        window.location.href = "window.html";
     }
 
 })
