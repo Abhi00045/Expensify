@@ -19,6 +19,7 @@ window.addEventListener("load",(e)=>{
     fourth.style.display="none";
 });
 
+
 function signup(){
     graphic.style.display="none";
     orginalBtn.style.display="none";

@@ -55,6 +55,7 @@ close
 //  console.log(incomeMoney);
 
 let income = 0;
+
 let expenses = 0;
 let balance = 0;
 //  console.log(select[incomesExpensives.selectedIndex].value);
