@@ -226,11 +226,6 @@ select{
     padding: 10px;
     border: 2px solid yellow;
 } */
-table,td,th{
-    border:2px solid rgb(154, 155, 149);
-    font-size: 15px;
-    font-weight: 600;
-  }
   /* table td,tr{
       background:#89878e; 
   } */
@@ -243,6 +238,11 @@ table,td,th{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    table,td,th{
+    border:2px solid rgb(154, 155, 149);
+    font-size: 15px;
+    font-weight: 600;
+  }
     /* background-color: rgb(48, 48, 48); */
     .heading{
         display: flex;
