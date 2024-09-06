@@ -9,6 +9,7 @@ let form = document.getElementById("form");
 let log = document.getElementById("log");
 let sig = document.getElementById("sig");
 let loginForm = document.getElementById("login-Form");
+let signupBtn = document.getElementById("signupBtn");
 let data =[];
 
 let dataPack= JSON.parse(localStorage.getItem("userInfo")) || [];
@@ -58,25 +59,27 @@ loginForm.addEventListener("submit",(e)=>{
 
 })
 
-form.addEventListener("submit",(e)=>{
-    e.preventDefault();
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-    // console.log(name,email,password);
-    // console.log({name , email , password})
-    if(name == "" || email == "" || password == ""){
-        alert("please enter name , email and password");
-    }else{
-        localStorage.setItem("userInfo" , JSON.stringify({name , email , password}));
-         let SignupDetails={name,
-           email,
-            password
-         };
-         data.push(SignupDetails);
-         console.log(data);  
-    }
-    // name="";
-    // email="";
-    // password="";
-})
+
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        // console.log(name,email,password);
+        // console.log({name , email , password})
+        if(name == "" || email == "" || password == ""){
+            alert("please enter name , email and password");
+        }else{
+            localStorage.setItem("userInfo" , JSON.stringify({name , email , password}));
+             let SignupDetails={name,
+               email,
+                password
+             };
+             data.push(SignupDetails);
+             console.log(data);  
+             window.location.href="window.html";
+        }
+        // name="";
+        // email="";
+        // password="";
+    })
